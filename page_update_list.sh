@@ -12,5 +12,6 @@ for url in $(cat conf_list); do
   fi
   if ! diff -q ./before_page/$name.txt tmp.txt; then
     echo $url >> ~/Desktop/todays_update_site.txt
+    cat tmp.txt > ./before_page/$name.txt
   fi
 done 
